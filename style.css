@@ -1,0 +1,59 @@
+/*Basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/*Background for the sky*/
+.sky {
+    height: 100vh;
+    background: #87CEEB; /* Light Sky Blue */
+    overflow: hidden;
+}
+
+/* Sun style */
+.sun {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    margin: 30px;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
+    z-index: 1;
+}
+
+
+/* Sun rays */
+.sun::before,
+.sun::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 10px;
+    transform-origin: 50% 100%;
+}
+
+.sun::before {
+    transform: rotate(45deg);
+}
+
+.sun::after {
+    transform: rotate(-45deg);
+}
+
+/* Create the sea */
+.sea {
+    background: linear-gradient(to bottom, #00aaff, #005f77);
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    margin-top: 70vh;
+    
+}
